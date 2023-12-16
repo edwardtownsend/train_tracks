@@ -58,6 +58,8 @@ body {
     height: 100%;
     border: 1px solid #999;
     position: relative;
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center center; /* Centers the image both horizontally and vertically */
   }
   
   .top-edge,
