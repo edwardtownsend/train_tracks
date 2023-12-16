@@ -8,8 +8,8 @@ body {
   
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
     gap: 2px;
     position: relative;
   }
@@ -22,37 +22,32 @@ body {
     position: relative;
   }
 
-  .top-grid-item{
+  .top-edge{
     width: 100%;
     height: 100%;
-    background-color: #ccc;
-    border: 1px solid #999;
     position: relative;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   
-  .bot-grid-item{
+  }
+
+  .right-edge{
     width: 100%;
     height: 100%;
-    background-color: #ccc;
-    border: 1px solid #999;
     position: relative;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   
-  .top-grid-item::before {
+  }
+
+  .top-edge::before {
     content: attr(data-number);
     position: absolute;
-    top: -20px;
-    /* Centre left edge to centre of parent */
-    left: 50%;
-    /* Move element 50% of its width to the left to centre element on centre of parent */
-    transform: translateX(-50%);
   }
-  
-  .bot-grid-item::before {
+
+  .right-edge::before {
     content: attr(data-number);
     position: absolute;
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
   }
-  
