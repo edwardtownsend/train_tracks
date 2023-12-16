@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     gridItem.dataset.number = newNumber;
                 }
                 else {
-                    // Display an error message
                     alert('Please enter a number between 0 and 8.');
                 }
 
@@ -33,5 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     }
+
+    const trackElements = document.querySelectorAll('.track-element');
+
+    trackElements.forEach(trackElement => {
+        trackElement.addEventListener('click', () => {
+            trackElements.forEach(element => {
+                element.classList.remove('highlight-border');
+            });
+            trackElement.classList.add('highlight-border');
+        });
+    });
   });
   
