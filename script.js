@@ -21,9 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if ((i === 0 || j === 8) && !(i === 0 && j === 8)) {
             gridItem.addEventListener('click', function() {
                 const newNumber = prompt('Enter a number:');
-                if (newNumber !== null) {
-                gridItem.dataset.number = newNumber;
-                } 
+                if (newNumber !== null && newNumber >= 0 && newNumber <= 8) {
+                    gridItem.dataset.number = newNumber;
+                }
+                else {
+                    // Display an error message
+                    alert('Please enter a number between 0 and 8.');
+                }
+
             });
         }
       }
