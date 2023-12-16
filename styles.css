@@ -21,20 +21,38 @@ body {
     border: 1px solid #999;
     position: relative;
   }
+
+  .top-grid-item{
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border: 1px solid #999;
+    position: relative;
+  }
   
-  .grid-item::before {
+  .bot-grid-item{
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border: 1px solid #999;
+    position: relative;
+  }
+  
+  .top-grid-item::before {
     content: attr(data-number);
     position: absolute;
-    top: -20px; /* Adjust as needed */
+    top: -20px;
+    /* Centre left edge to centre of parent */
     left: 50%;
+    /* Move element 50% of its width to the left to centre element on centre of parent */
     transform: translateX(-50%);
   }
   
-  .grid-item::after {
+  .bot-grid-item::before {
     content: attr(data-number);
     position: absolute;
     top: 50%;
-    right: -20px; /* Adjust as needed */
+    right: -20px;
     transform: translateY(-50%);
   }
   
