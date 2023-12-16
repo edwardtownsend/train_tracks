@@ -6,6 +6,45 @@ body {
     margin: 0;
   }
   
+  #track-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin-top: 20px;
+  }
+  
+  .track-element {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    background-size: cover;
+  }
+  
+  #vertical {
+    background-image: url('images/vertical.jpg');
+  }
+  
+  #horizontal {
+    background-image: url('images/horizontal.jpg');
+  }
+  
+  #left_to_down {
+    background-image: url('images/left_to_down.jpg');
+  }
+  
+  #left_to_up {
+    background-image: url('images/left_to_up.jpg');
+  }
+  
+  #up_to_right {
+    background-image: url('images/up_to_right.jpg');
+  }
+  
+  #down_to_right {
+    background-image: url('images/down_to_right.jpg');
+  }
+  
   .grid-container {
     display: grid;
     grid-template-columns: repeat(9, 50px);
@@ -17,37 +56,22 @@ body {
   .grid-item {
     width: 100%;
     height: 100%;
-    background-color: #ccc;
     border: 1px solid #999;
     position: relative;
   }
-
-  .top-edge{
+  
+  .top-edge,
+  .right-edge {
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+  }
   
-  }
-
-  .right-edge{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-  }
-
-  .top-edge::before {
-    content: attr(data-number);
-    position: absolute;
-  }
-
+  .top-edge::before,
   .right-edge::before {
     content: attr(data-number);
     position: absolute;
   }
+  
